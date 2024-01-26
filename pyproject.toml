@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lpm"
+version = "0.1.0"
+authors = [{ name = "Jay Mody", email = "jaykmody@gmail.com" }]
+description = "Command line application for practicing coding speed."
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = [
+    "lpm",
+    "wpm",
+    "cpm",
+    "typing",
+    "typist",
+    "code",
+    "keyboard",
+    "speed",
+    "practice",
+    "test",
+]
+classifiers = [
+    "Environment :: Console",
+    "Natural Language :: English",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+requires-python = ">=3.6"
+dependencies = ["windows-curses >=2.3.0, <3.0.0; sys_platform == 'win32'"]
+
+[project.urls]
+homepage = "https://github.com/jaymody/lpm"
+repository = "https://github.com/jaymody/lpm"
+
+[project.scripts]
+lpm = "lpm.__main__:cli"
+
+[project.optional-dependencies]
+dev = ["pytest"]
